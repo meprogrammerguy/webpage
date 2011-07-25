@@ -2364,7 +2364,7 @@ if (TiddlyWiki.prototype.coreGetRecursiveTiddlerText==undefined) {
 ** Just started so not much info, yet
 ** Some good funny parts</pre>
 </div>
-<div title="BookJournal" modifier="MeProgrammerGuy" created="200707102206" modified="201107201154" changecount="19">
+<div title="BookJournal" modifier="MeProgrammerGuy" created="200707102206" modified="201107221856" changecount="20">
 <pre>!19 July 2011
 * [[Frostbitten|http://www.kelleyarmstrong.com/frostbitten/]] by [[Kelley Armstrong|http://www.kelleyarmstrong.com/]]
 * Got back on this book and it is as good as I expected
@@ -3178,8 +3178,11 @@ mIzhN5Ls2vsjEwns1ug0R8VSwCE3hcn/2Q==
 !MeProgrammerGuy - 24 Aug 2006
 * Just a friendly little tip&amp;#8230;.If your routine needs string array storage (char x[2000];) for example do NOT declare this in the local stack. Anything bigger than about 200 bytes should be declared global to the DLL. If you do not follow this rule (Booming will occur). If you don&amp;#8217;t know what I&amp;#8217;m talking about please at least let me code review your code&amp;#8230;.</pre>
 </div>
-<div title="DailyJournal" modifier="MeProgrammerGuy" created="200707121807" modified="201107221155" changecount="104">
-<pre>!!Friday 22 July 2011
+<div title="DailyJournal" modifier="MeProgrammerGuy" created="200707121807" modified="201107251155" changecount="105">
+<pre>!!Monday 25 July 2011
+* working on ~PMSim improvements
+** got the fields set as sticky
+!!Friday 22 July 2011
 * working on ~PMSim improvements
 !!Thursday 21 July 2011
 * Fixing and updating the ~PMSim
@@ -5316,6 +5319,11 @@ DGUAAAAAAFjDwFAGAAAAAIA1DAxlAAAAAABYw8BQBgAAAACANex/h3pw/AiXa64A
 AAAASUVORK5CYII=
 ---END_DATA---
 %/</pre>
+</div>
+<div title="FantasyFootballClient" creator="MeProgrammerGuy" modifier="MeProgrammerGuy" created="201107251157" changecount="1">
+<pre>This is the Client side for my iPad App
+
+[[Fantasy Football Draft|http://webpages.charter.net/meprogrammerguy/ffl.html]]</pre>
 </div>
 <div title="FavoritePoetry" modifier="MeProgrammerGuy" created="200707102225" modified="201011201923" tags="poetry">
 <pre>&lt;&lt;tiddler [[Shakespeare's Sonnet 130]]&gt;&gt;
@@ -12020,12 +12028,13 @@ kAhMOwL/A5EqaAPLdNtAAAAAAElFTkSuQmCC
 ---END_DATA---
 %/</pre>
 </div>
-<div title="MainMenu" modifier="MeProgrammerGuy" created="201006241819" modified="201006241851">
+<div title="MainMenu" modifier="MeProgrammerGuy" created="201006241819" modified="201107251154" changecount="1">
 <pre>DailyJournal
 BookJournal
 FavoriteQuotes
 FavoritePoetry
 BackPages
+FantasyFootballClient
 
 
 v&lt;&lt;version&gt;&gt;  [img[RSS Feed|feed-icon-14x14.png][http://meprogrammerguy.com/index.xml]]</pre>
@@ -16260,86 +16269,6 @@ eXSpFsgVvLJQWpH+xSpr4otg/HI0TR/t97cxTUS+QxIMRTLi/9ZYJPI/AgwAoc3W
 7ZrqR2IAAAAASUVORK5CYII=
 ---END_DATA---
 %/</pre>
-</div>
-<div title="fflclient" creator="YourName" modifier="MeProgrammerGuy" created="201107071707" modified="201107071710" changecount="4">
-<pre>&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;
-&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
-&lt;head runat=&quot;server&quot;&gt;
-    &lt;title&gt;fantasy football&lt;/title&gt;
-    &lt;link href=&quot;./css/Styles.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;
-    &lt;script src=&quot;http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
-    &lt;script src=&quot;./js/websocket.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
-    &lt;script src=&quot;./js/application.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
-    &lt;script src=&quot;./js/os3grid.js&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;form id=&quot;form1&quot; runat=&quot;server&quot;&gt;
-    &lt;div id='SplashContainer'&gt;
-        &lt;h4&gt;
-            Welcome to the Fantasy Football Draft
-            &lt;br /&gt;
-            The Draft Begins this year on September 1st at 5:30PM
-        &lt;/h4&gt;
-    &lt;/div&gt;
-    &lt;label for=&quot;leaguename&quot;&gt;
-        LeagueName&lt;/label&gt;
-    &lt;input type=&quot;text&quot; name=&quot;leaguename&quot; value=&quot;&quot; id=&quot;leaguename&quot; onchange='LeagueNameChanged();' /&gt;
-    &lt;label for=&quot;username&quot;&gt;
-        UserName&lt;/label&gt;
-    &lt;input type=&quot;text&quot; name=&quot;username&quot; value=&quot;&quot; id=&quot;username&quot; onchange='UserNameChanged();' /&gt;
-    ServerName:
-    &lt;input type=&quot;text&quot; id=&quot;Connection&quot; onchange='ConnectionChanged();' /&gt;
-    &lt;button id='ToggleConnection' type=&quot;button&quot; onclick='ToggleConnectionClicked();'&gt;
-        Connect&lt;/button&gt;
-    &lt;div id='LogContainer' class='logcontainer'&gt;
-    &lt;/div&gt;
-    &lt;div id='SendDataContainer'&gt;
-        &lt;input type=&quot;text&quot; id=&quot;DataToSend&quot; size=&quot;90&quot; /&gt;
-        &lt;button id='SendData' type=&quot;button&quot; onclick='SendDataClicked();'&gt;
-            Send&lt;/button&gt;
-    &lt;/div&gt;
-    &lt;br /&gt;
-    &lt;div id='PickContainer' class='pickcontainer'&gt;
-        &lt;button id='ClockData' type=&quot;button&quot; onclick='ClockClicked();'&gt;
-            Start&lt;/button&gt;
-        &lt;input type=&quot;text&quot; id=&quot;clockcount&quot; style=&quot;border: 0px solid #000000;&quot; readonly=&quot;readonly&quot; /&gt;
-        &lt;button id='lastpick' type=&quot;button&quot; onclick='BackClicked();'&gt;
-            Back&lt;/button&gt;
-        &lt;button id='nextpick' type=&quot;button&quot; onclick='NextClicked();'&gt;
-            Next&lt;/button&gt;
-        &lt;br /&gt;
-        &lt;label for=&quot;round&quot;&gt;
-            Round&lt;/label&gt;
-        &lt;input type=&quot;text&quot; name=&quot;round&quot; value=&quot;&quot; size=&quot;3&quot; id=&quot;round&quot; onchange=&quot;RoundChanged();&quot; /&gt;
-        &lt;label for=&quot;draft&quot;&gt;
-            Draft Order&lt;/label&gt;
-        &lt;input type=&quot;text&quot; name=&quot;draft&quot; value=&quot;&quot; size=&quot;3&quot; id=&quot;draft&quot; onchange=&quot;DraftChanged();&quot; /&gt;
-        &lt;input type=&quot;text&quot; id=&quot;draftteam&quot; style=&quot;border: 0px solid #000000;&quot; size=&quot;24&quot; readonly=&quot;readonly&quot; /&gt;
-        &lt;input type=&quot;text&quot; id=&quot;draftowners&quot; style=&quot;border: 0px solid #000000;&quot; size=&quot;50&quot;
-            readonly=&quot;readonly&quot; /&gt;
-        &lt;br /&gt;
-        &lt;input type=&quot;text&quot; id=&quot;pickplayer&quot; style=&quot;border: 0px solid #000000; color: Blue&quot;
-            readonly=&quot;readonly&quot; /&gt;
-        &lt;input type=&quot;text&quot; id=&quot;pickposition&quot; style=&quot;border: 0px solid #000000; color: Blue&quot;
-            size=&quot;3&quot; readonly=&quot;readonly&quot; /&gt;
-        &lt;input type=&quot;text&quot; id=&quot;pickteam&quot; style=&quot;border: 0px solid #000000; color: Blue&quot; size=&quot;3&quot;
-            readonly=&quot;readonly&quot; /&gt;
-        &lt;br /&gt;
-        &lt;button id='pick' type=&quot;button&quot; onclick='PickClicked();'&gt;
-            Pick&lt;/button&gt;
-    &lt;/div&gt;
-    &lt;div id='GridContainer'&gt;
-        &lt;br /&gt;
-        &lt;label for=&quot;filter&quot;&gt;
-            Player&lt;/label&gt;
-        &lt;input type=&quot;text&quot; name=&quot;filter&quot; value=&quot;&quot; id=&quot;filter&quot; /&gt;
-        &lt;div id=&quot;grid&quot;&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;/form&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
 </div>
 <div title="frown.gif" modifier="MeProgrammerGuy" created="200707182320" modified="200707190031" tags="SmiliesPackage attachment excludeMissing smilies">
 <pre>| source file:|{{{/home/jsmith/Web Page/gif/frown.gif}}}|
