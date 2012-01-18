@@ -45,65 +45,7 @@ DAMAGE.
 
 <!--PRE-HEAD-END-->
 <title> Unfrozen Caveman Programmer  - Your modern interwebs frighten me </title>
-<style id="styleArea" type="text/css">
-
-        /* Temp style for overlay and box */
-		.overlay {
-			background-color: black;
-			opacity: .9;
-			position: fixed;
-			top: 0px;
-			bottom: 0px;
-			left: 0px;
-			right: 0px;
-			z-index: 100;
-		}
-		.box {
-			background-color: #fff;
-			color: #656565;
-			position: fixed;
-			top: -200px;
-			left: 30%;
-			right: 30%;	
-			padding: 20px;
-			border: 2px solid #ccc;
-			border-radius: 15px;
-			-moz-border-radius: 15px;
-			-webkit-border-radius: 15px;
-			-khtml-border-radius: 15px;
-			-moz-box-shadow: 0 1px 5px #333;
-			-webkit-box-shadow: 0 1px 5px #333;
-			z-index: 101;
-		}
-		.box h1 {
-			background-color: #000;			
-			border-bottom: 1px solid #777;
-			color: #fff;
-			margin: -20px -20px 0px -20px;
-			padding: 10px;			
-			text-align: center;
-			border-top-left-radius: 15px;
-			border-top-right-radius: 15px;
-			-moz-border-radius: 15px 15px 0px 0px;
-			-webkit-border-top-left-radius: 15px;
-			-webkit-border-top-right-radius: 15px;
-			-khtml-border-top-left-radius: 15px;
-			-khtml-border-top-right-radius: 15px;
-		}
-		p.message {
-			margin-top: 15px;
-		}
-		a.boxclose{			
-			color: #888;
-			cursor:pointer;
-            float:right;
-            font-size: .8em;
-            margin-bottom:-30px;
-            margin-right:-20px;
-			width:120px;
-        }	
-        /* Temp style for overlay and box */
-		
+<style id="styleArea" type="text/css">	
 #saveTest {display:none;}
 #messageArea {display:none;}
 #copyright {display:none;}
@@ -634,8 +576,8 @@ I like my new page and the formatting although I may work on the table formattin
 <div title="18 April 2008" modifier="MeProgrammerGuy" created="200804181319">
 <pre>It has been awhile since I've updated my Front page. I have decided to change up my page look. I hope you like it. I am going to be doing lots of under the cover clean ups so if things break send me a reddit message and I'll get right on it. Many of my changes are going to be for my ease of editing and more quickly allow posting up on my web page. In the future I hope to transition from an on web diary to more of a blogging and new content web page. It will be geeky stuff I am doing and what I like. I may have a &quot;Best Of the Web&quot; section where I'll share cool stuff that I have found during surfing.</pre>
 </div>
-<div title="18 January 2011" creator="MeProgrammerGuy" modifier="MeProgrammerGuy" created="201201171803" modified="201201171806" changecount="2">
-<pre>This site is blacked-out today in protest of S.O.P.A. For more information please visit 
+<div title="18 January 2011" creator="MeProgrammerGuy" modifier="MeProgrammerGuy" created="201201171803" modified="201201181636" changecount="3">
+<pre>This site was blacked-out today in protest of S.O.P.A. For more information please visit 
 * [[American Censorship|http://americancensorship.org/]]
 and be sure to scroll down to view the resources there.</pre>
 </div>
@@ -3276,8 +3218,12 @@ mIzhN5Ls2vsjEwns1ug0R8VSwCE3hcn/2Q==
 !MeProgrammerGuy - 24 Aug 2006
 * Just a friendly little tip&amp;#8230;.If your routine needs string array storage (char x[2000];) for example do NOT declare this in the local stack. Anything bigger than about 200 bytes should be declared global to the DLL. If you do not follow this rule (Booming will occur). If you don&amp;#8217;t know what I&amp;#8217;m talking about please at least let me code review your code&amp;#8230;.</pre>
 </div>
-<div title="DailyJournal" modifier="MeProgrammerGuy" created="200707121807" modified="201201171759" changecount="83">
-<pre>!!Wednesday 18 January 2011
+<div title="DailyJournal" modifier="MeProgrammerGuy" created="200707121807" modified="201201181638" changecount="84">
+<pre>!!Thursday 19 January 2011
+* Hi everyone, site is back up
+* Item Groups project
+** Code is really tore up starting to support the ~MultiTracking part of this modification
+!!Wednesday 18 January 2011
 * This page will be dark today to protest the SOPA bill.
 * Today I am starting the multi-Tracking support on my Item Groups Project
 !!Tuesday 17 January 2011
@@ -26971,21 +26917,6 @@ if(useJavaSaver)
 <!--POST-SCRIPT-START-->
 
 <!--POST-SCRIPT-END-->
-
-<!-- The overlay and the message box -->
-  <div class="overlay" id="overlay" </div>
-  	<div class="box" id="box">
-      <h1>Stop S.O.P.A.</h1>
-      <p class="message">This site is blacked-out today in protest of S.O.P.A. For more information please visit &nbsp;<a href="http://americancensorship.org/" title="More info on SOPA">American Censorship</a> &mdash; and be sure to scroll down to view the resources there.
-      </p>
-  </div>
-    <script type="text/javascript">
-        $(function() {
-           $('#overlay').fadeIn('slow',function(){
-               $('#box').animate({'top':'160px'},800);               
-            });             
-        });
-    </script>
 	
 </body>
 </html>
