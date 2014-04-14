@@ -4,6 +4,14 @@ param(
 <# 
 .\go.ps1 "Text Comment for Commit"
 #>
+if (!$a)
+{ 
+	$a = Read-Host 'What is your commit comment string?'
+}
+if (!$a)
+{
+	$a = "Daily webpage update"
+}
 git add -A
 git commit -m $a
 git push
