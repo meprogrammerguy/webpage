@@ -6,11 +6,12 @@ param(
 #>
 if (!$a)
 { 
-	$a = Read-Host 'What is your commit comment string?'
+	$a = Read-Host 'comment: or (<cr> for generic comment)'
 }
 if (!$a)
 {
-	$a = "Daily webpage update"
+	$a = Get-Date
+	$a = $a + " page updated."
 }
 git add -A
 git commit -m $a
