@@ -5,6 +5,7 @@ param(
 .\go.ps1 "Text Comment for Commit"
 
 	Make sure to have Dropbox folder named as "My Dropbox"
+	mklink /D /J "C:\Users\Admin\My Dropbox" "C:\Users\Admin\Dropbox"
 #>
 if (!$a)
 { 
