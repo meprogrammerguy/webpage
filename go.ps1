@@ -4,7 +4,7 @@ param(
 <# 
 .\go.ps1 "Text Comment for Commit"
 
-	Make sure to have a "My Dropbox" link in the Documents Library
+	Make sure to have Dropbox folder named as "My Dropbox"
 #>
 if (!$a)
 { 
