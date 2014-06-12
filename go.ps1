@@ -22,4 +22,3 @@ git commit -m $a
 git push
 echo "Copying webpage to Dropbox"
 copy "$env:USERPROFILE\Documents\github\webpage\index.html" "$env:USERPROFILE\My Dropbox\ftp sync\index.html"
-exit
