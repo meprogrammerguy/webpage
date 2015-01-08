@@ -3,10 +3,6 @@ param(
 )
 <# 
 .\go.ps1 "Text Comment for Commit"
-
-	Make sure to have Dropbox folder named as "My Dropbox"
-	mklink /D /J "C:\Users\Admin\My Dropbox" "C:\Users\Admin\Dropbox"
-	(first part is the new location)
 #>
 if (!$a)
 { 
@@ -20,5 +16,5 @@ if (!$a)
 git add -A
 git commit -m $a
 git push
-echo "Copying webpage to Dropbox"
-copy "$env:USERPROFILE\Documents\github\webpage\index.html" "$env:USERPROFILE\My Dropbox\ftp sync\index.html"
+echo "Copying webpage to Google Drive"
+copy "$env:USERPROFILE\Documents\github\webpage\index.html" "$env:USERPROFILE\Google Drive\ftp sync\index.html"
