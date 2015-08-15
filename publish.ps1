@@ -2,7 +2,7 @@ param(
 [string]$a
 )
 <# 
-.\go.ps1 "Text Comment for Commit"
+.\publish.ps1 "Text Comment for Commit"
 #>
 if (!$a)
 { 
