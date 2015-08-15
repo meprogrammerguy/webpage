@@ -1,24 +1,6 @@
-param(
-[string]$a
-)
-<# 
-.\publish.ps1 "Text Comment for Commit"
-#>
-if (!$a)
-{ 
-	$a = Read-Host 'comment: or (<cr> for generic comment)'
-}
-if (!$a)
-{
-	$a = Get-Date
-	$a = $a + " page updated."
-}
+
 git add -A
-git commit -m $a
+git commit -m "Web page published from Windows box"
 git push
-<#
-echo "Copying webpage to Google Drive"
-copy "$env:USERPROFILE\Documents\github\webpage\index.html" "$env:USERPROFILE\Google Drive\ftp sync\index.html"
-#>
 echo "Copying webpage to One Drive"
 copy "$env:USERPROFILE\Documents\github\webpage\index.html" "$env:USERPROFILE\OneDrive\Documents\ftp sync\index.html"
