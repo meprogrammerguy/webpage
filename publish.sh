@@ -1,7 +1,7 @@
 #!/bin/bash
 
 git add -A
-git commit -m "Web page published from Mint Linux box"
+git commit -m "Web page published from linux-home box"
 git push
-echo "Copying webpage to One Drive"
-cp index.html "/home/jsmith/OneDrive/Documents/ftp sync/"
+echo "use ftp client to finish the job"
+#cp index.html "/home/jsmith/OneDrive/Documents/ftp sync/"
