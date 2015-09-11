@@ -3,5 +3,5 @@
 git add -A
 git commit -m "Web page published from linux-home box"
 git push
-echo "use ftp client to finish the job"
-#cp index.html "/home/jsmith/OneDrive/Documents/ftp sync/"
+echo "Copying to OneDrive from Linux mint"
+cp index.html "smb://win10-hd-home/users/jsmith/OneDrive/Documents/ftp sync/"
