@@ -3,10 +3,13 @@ git add -A
 git commit -m "Web page published from Windows box"
 git push
 echo "Copying webpage to One Drive"
-if (Test-Path index(1).html)
+$filelocation = $PSScriptRoot + 'index(1).html'
+$filelocation
+exit
+if (Test-Path -path $filelocation)
 {
 	Remove-Item index.html
-	Rename-Item index(1).html -NewName index.html
+	Rename-Item $filelocation -NewName index.html
 }
 copy "index.html" "$env:USERPROFILE\OneDrive\Documents\ftp sync\index.html"
 
