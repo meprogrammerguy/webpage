@@ -1,4 +1,9 @@
-
+$filelocation = $PSScriptRoot + '\index(1).html'
+if (Test-Path -path $filelocation)
+{
+	Remove-Item index.html
+	Rename-Item $filelocation -NewName index.html
+}
 git add -A
 git commit -m "Web page published from Windows box"
 git push
