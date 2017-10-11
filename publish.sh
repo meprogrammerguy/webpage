@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 
 git add -A
 git commit -m "Web page published from linux-home box"
