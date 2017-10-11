@@ -3,7 +3,7 @@
 $FILE = "index (1).html"
 if [ -f $FILE ]; then
    rm -f index.html
-   cp -f $FILE index.html
+   mv $FILE index.html
 fi
 git add -A
 git commit -m "Web page published from linux-home box"
