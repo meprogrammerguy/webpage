@@ -1,0 +1,5 @@
+./templates:
+another_page.html
+contact.html
+examples.html
+page.html
