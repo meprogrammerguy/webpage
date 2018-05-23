@@ -15,3 +15,5 @@ cp -f "style.txt" "/home/jsmith/OneDrive/Documents/LocalWeb"
 cp -f "index.html" "/home/jsmith/OneDrive/Documents/LocalWeb"
 cp -r "templates/" "/home/jsmith/OneDrive/Documents/LocalWeb"
 cp -r "style/" "/home/jsmith/OneDrive/Documents/LocalWeb"
+rm style.txt
+rm templates.txt
