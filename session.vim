@@ -16,8 +16,8 @@ vnoremap  "+y
 noremap <expr>  has("gui_running") ? ":promptfind\" : "/"
 nnoremap <expr>  has("gui_running") ? ":promptrepl\" : "\"
 noremap  
-vnoremap  :update
 nnoremap  :update
+vnoremap  :update
 onoremap  :update
 nmap  "+gP
 omap  "+gP
@@ -28,17 +28,17 @@ cnoremap   :simalt ~
 inoremap   :simalt ~
 vmap gx <Plug>NetrwBrowseXVis
 nmap gx <Plug>NetrwBrowseX
+nmap <S-Insert> "+gP
+nnoremap <C-Tab> w
+nnoremap <C-F4> c
 vnoremap <silent> <Plug>NetrwBrowseXVis :call netrw#BrowseXVis()
 nnoremap <silent> <Plug>NetrwBrowseX :call netrw#BrowseX(expand((exists("g:netrw_gx")? g:netrw_gx : '<cfile>')),netrw#CheckIfRemote())
 nmap <F6> :NERDTreeToggle
 onoremap <C-F4> c
-nnoremap <C-F4> c
 vnoremap <C-F4> c
 onoremap <C-Tab> w
-nnoremap <C-Tab> w
 vnoremap <C-Tab> w
 vmap <S-Insert> 
-nmap <S-Insert> "+gP
 omap <S-Insert> "+gP
 vnoremap <C-Insert> "+y
 vnoremap <S-Del> "+x
@@ -89,20 +89,19 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
+badd +1 publish.sh
 badd +45 index.html
 badd +1 publish.ps1
-badd +1 publish.sh
-badd +1 README.md
 badd +44 templates/examples.html
 badd +44 templates/page.html
-badd +86 templates/contact.html
+badd +1 templates/contact.html
 badd +44 templates/another_page.html
 badd +99 style/style.css
 argglobal
 silent! argdel *
 set lines=49 columns=204
 winpos 67 27
-edit templates/contact.html
+edit publish.sh
 set splitbelow splitright
 set nosplitbelow
 set nosplitright
@@ -142,8 +141,8 @@ setlocal nodiff
 setlocal equalprg=
 setlocal errorformat=
 setlocal expandtab
-if &filetype != 'html'
-setlocal filetype=html
+if &filetype != 'sh'
+setlocal filetype=sh
 endif
 setlocal fixendofline
 setlocal foldcolumn=0
@@ -206,8 +205,8 @@ setlocal statusline=
 setlocal suffixesadd=
 setlocal swapfile
 setlocal synmaxcol=3000
-if &syntax != 'html'
-setlocal syntax=html
+if &syntax != 'sh'
+setlocal syntax=sh
 endif
 setlocal tabstop=8
 setlocal tagcase=
@@ -223,12 +222,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 51 - ((22 * winheight(0) + 24) / 48)
+let s:l = 6 - ((5 * winheight(0) + 24) / 48)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-51
-normal! 016|
+6
+normal! 040|
 tabnext 1
 if exists('s:wipebuf')
   silent exe 'bwipe ' . s:wipebuf
